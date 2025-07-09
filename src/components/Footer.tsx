@@ -29,47 +29,18 @@ const Footer = () => {
     {
       title: "Soporte",
       links: [
-        { name: "Centro de Ayuda", href: "#" },
-        { name: "Contacto", href: "#" },
-        { name: "FAQ", href: "#" },
-        { name: "Comunidad", href: "#" }
+        { name: "Contacto", href: "#" }
       ]
     }
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", name: "Facebook" },
-    { icon: Twitter, href: "#", name: "Twitter" },
     { icon: Linkedin, href: "#", name: "LinkedIn" },
     { icon: Instagram, href: "#", name: "Instagram" }
   ];
 
   return (
     <footer className="bg-card border-t border-border">
-      {/* Newsletter Section */}
-      <div className="border-b border-border">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Mantente al día con las últimas tendencias
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Recibe contenido exclusivo, tips y noticias sobre Data Science y Customer Experience directamente en tu email.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <Input 
-                type="email" 
-                placeholder="Tu email..." 
-                className="flex-1"
-              />
-              <Button variant="hero" className="group">
-                Suscribirse
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
