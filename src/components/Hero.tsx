@@ -5,7 +5,7 @@ const Hero = () => {
   console.log("Hero component rendering");
   
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="w-full h-full bg-gradient-to-br from-background via-background/80 to-background"></div>
@@ -29,22 +29,22 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-8 animate-slide-in-cyber">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-slide-in-cyber">
             <span className="block mb-2">Domina el</span>
             <span className="block text-foreground mb-2">Futuro</span>
             <span className="block">de los Datos</span>
           </h1>
           
-          <p className="text-xl md:text-3xl mb-12 text-muted-foreground leading-relaxed animate-slide-in-cyber" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg md:text-xl mb-8 text-muted-foreground leading-relaxed animate-slide-in-cyber" style={{ animationDelay: '0.3s' }}>
             Transforma tu carrera con nuestros programas especializados en 
             <span className="text-foreground font-semibold"> Data Science</span> y <span className="text-foreground font-semibold">Customer Experience</span>
           </p>
 
           {/* Feature icons */}
-          <div className="flex justify-center space-x-8 mb-12 animate-slide-in-cyber" style={{ animationDelay: '0.6s' }}>
+          <div className="flex justify-center space-x-6 mb-8 animate-slide-in-cyber" style={{ animationDelay: '0.6s' }}>
             <div className="flex flex-col items-center space-y-2 group">
               <div className="p-4 rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-all duration-300 cyber-glow">
                 <Brain className="h-8 w-8 text-primary" />

@@ -23,7 +23,7 @@ const Header = () => {
           <div className="flex items-center space-x-2 animate-slide-in-cyber">
             <div className="relative">
               <img 
-                src="/lovable-uploads/47dc23a0-313b-44c7-9495-33e3338bd073.png" 
+                src="/lovable-uploads/a9a50dea-483d-4b7b-a57f-b04774353da4.png" 
                 alt="Data y CX Academy" 
                 className="h-12 w-auto drop-shadow-lg"
               />
