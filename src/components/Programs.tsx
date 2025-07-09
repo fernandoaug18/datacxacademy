@@ -103,13 +103,10 @@ const Programs = () => {
           {programs.map((program) => (
             <Card key={program.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card border-border">
               <CardHeader className="pb-4">
-                <div className="flex justify-between items-start mb-3">
+                <div className="flex justify-start items-start mb-3">
                   <Badge variant="outline" className="text-xs">
                     {program.level}
                   </Badge>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-primary">{program.price}</div>
-                  </div>
                 </div>
                 
                 <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
@@ -162,15 +159,6 @@ const Programs = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
-            ¿No estás seguro cuál programa es para ti?
-          </p>
-          <Button variant="outline" size="lg">
-            Hablar con un Asesor
-          </Button>
-        </div>
       </div>
     </section>
   );

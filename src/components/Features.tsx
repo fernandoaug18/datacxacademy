@@ -44,21 +44,9 @@ const Features = () => {
       color: "text-primary"
     },
     {
-      icon: Headphones,
-      title: "Soporte 24/7",
-      description: "Comunidad activa y soporte técnico disponible para resolver tus dudas en cualquier momento.",
-      color: "text-secondary"
-    },
-    {
       icon: Award,
       title: "Certificación Oficial",
       description: "Obtén certificados reconocidos por la industria que validen tus nuevas competencias.",
-      color: "text-primary"
-    },
-    {
-      icon: Trophy,
-      title: "Garantía de Empleo",
-      description: "Te ayudamos a encontrar trabajo o te devolvemos tu dinero. Ese es nuestro compromiso contigo.",
       color: "text-secondary"
     }
   ];
@@ -83,7 +71,7 @@ const Features = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index} 
