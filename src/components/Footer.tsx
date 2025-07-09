@@ -27,15 +27,6 @@ const Footer = () => {
       ]
     },
     {
-      title: "Recursos",
-      links: [
-        { name: "Blog", href: "#" },
-        { name: "Documentación", href: "#" },
-        { name: "Casos de Estudio", href: "#" },
-        { name: "Webinars", href: "#" }
-      ]
-    },
-    {
       title: "Soporte",
       links: [
         { name: "Centro de Ayuda", href: "#" },
@@ -82,35 +73,25 @@ const Footer = () => {
 
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
-          <div className="lg:col-span-2">
+          <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-hero-gradient p-2 rounded-lg">
-                <GraduationCap className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h2 className="text-xl font-bold text-foreground">Data y CX Academy</h2>
-              </div>
+              <img 
+                src="/lovable-uploads/47dc23a0-313b-44c7-9495-33e3338bd073.png" 
+                alt="Data y CX Academy" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
               Transformamos carreras a través de la educación especializada en Data Science y Customer Experience. 
               Únete a nuestra comunidad de profesionales exitosos.
             </p>
             
-            {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="h-4 w-4" />
                 <span>contacto@dataycxacademy.com</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span>Ciudad de México, México</span>
               </div>
             </div>
           </div>

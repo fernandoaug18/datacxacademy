@@ -17,12 +17,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="bg-hero-gradient p-2 rounded-lg">
-              <GraduationCap className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">Data y CX Academy</h1>
-            </div>
+            <img 
+              src="/lovable-uploads/47dc23a0-313b-44c7-9495-33e3338bd073.png" 
+              alt="Data y CX Academy" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
