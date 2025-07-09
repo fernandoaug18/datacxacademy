@@ -18,9 +18,16 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="bg-hero-gradient p-2 rounded-lg">
-              <GraduationCap className="h-6 w-6 text-white" />
-            </div>
+            <img 
+              src="/src/assets/logo-black.png" 
+              alt="Data y CX Academy" 
+              className="h-8 w-auto dark:hidden"
+            />
+            <img 
+              src="/src/assets/logo-white.png" 
+              alt="Data y CX Academy" 
+              className="h-8 w-auto hidden dark:block"
+            />
             <div>
               <h1 className="text-xl font-bold text-foreground">Data y CX Academy</h1>
             </div>
