@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 // Using placeholder for hero image - will be updated with proper image
 
 const Hero = () => {
+  console.log("Hero component rendering");
+  
   return (
-    <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden" style={{minHeight: '80vh', background: 'linear-gradient(135deg, #2563eb, #10b981)'}}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div className="w-full h-full bg-gradient-to-br from-primary to-secondary"></div>
+        <div className="w-full h-full bg-gradient-to-br from-primary to-secondary" style={{background: 'linear-gradient(135deg, #2563eb, #10b981)'}}></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-secondary/80"></div>
       </div>
 
