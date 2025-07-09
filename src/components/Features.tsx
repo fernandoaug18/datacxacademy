@@ -85,7 +85,7 @@ const Features = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
           <div className="space-y-2">
             <div className="text-3xl md:text-4xl font-bold bg-hero-gradient bg-clip-text text-transparent">
               500+
@@ -97,18 +97,6 @@ const Features = () => {
               98%
             </div>
             <div className="text-muted-foreground text-sm">Tasa de Satisfacción</div>
-          </div>
-          <div className="space-y-2">
-            <div className="text-3xl md:text-4xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-              50+
-            </div>
-            <div className="text-muted-foreground text-sm">Empresas Asociadas</div>
-          </div>
-          <div className="space-y-2">
-            <div className="text-3xl md:text-4xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-              85%
-            </div>
-            <div className="text-muted-foreground text-sm">Mejora Salarial</div>
           </div>
         </div>
       </div>
