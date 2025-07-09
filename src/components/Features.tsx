@@ -40,16 +40,22 @@ const Features = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-background relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-secondary/5 to-accent/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
+        <div className="text-center mb-16 animate-slide-in-cyber">
+          <Badge variant="outline" className="mb-4 border-primary/30 text-primary bg-primary/5">
             ¿Por qué elegirnos?
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Una Experiencia de Aprendizaje{" "}
-            <span className="bg-hero-gradient bg-clip-text text-transparent">
+            <span className="text-foreground">
               Única
             </span>
           </h2>
@@ -63,22 +69,29 @@ const Features = () => {
           {features.map((feature, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-card border-border"
+              className="cyber-card group animate-slide-in-cyber"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <CardContent className="p-6 text-center">
-                <div className="mb-4 flex justify-center">
-                  <div className="p-3 rounded-full bg-muted group-hover:bg-primary/10 transition-colors">
-                    <feature.icon className={`h-8 w-8 ${feature.color} group-hover:scale-110 transition-transform`} />
+              <CardContent className="p-6 text-center relative">
+                {/* Holographic effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <div className="mb-4 flex justify-center relative z-10">
+                  <div className="p-4 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 group-hover:border-primary/40 transition-all duration-300 group-hover:animate-hologram">
+                    <feature.icon className={`h-8 w-8 ${feature.color} group-hover:scale-110 transition-transform duration-300`} />
                   </div>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:neon-text transition-all duration-300 relative z-10">
                   {feature.title}
                 </h3>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed relative z-10">
                   {feature.description}
                 </p>
+
+                {/* Cyber lines */}
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </CardContent>
             </Card>
           ))}

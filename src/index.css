@@ -8,41 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 20% 15%;
+    --background: 8 20% 4%;
+    --foreground: 210 90% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card: 15 25% 8%;
+    --card-foreground: 210 90% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover: 15 25% 8%;
+    --popover-foreground: 210 90% 95%;
 
-    --primary: 210 85% 45%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 210 85% 40%;
+    --primary: 220 90% 60%;
+    --primary-foreground: 15 25% 8%;
+    --primary-hover: 220 90% 55%;
 
-    --secondary: 152 70% 50%;
-    --secondary-foreground: 0 0% 98%;
-    --secondary-hover: 152 70% 45%;
+    --secondary: 160 85% 55%;
+    --secondary-foreground: 15 25% 8%;
+    --secondary-hover: 160 85% 50%;
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 20% 50%;
+    --accent: 280 70% 65%;
+    --accent-foreground: 15 25% 8%;
 
-    --accent: 210 40% 95%;
-    --accent-foreground: 210 85% 45%;
+    --muted: 20 15% 15%;
+    --muted-foreground: 210 40% 70%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 210 85% 45%;
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 220 90% 60%;
 
-    /* Custom academy tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(210 85% 45%), hsl(152 70% 50%));
-    --glass-bg: 0 0% 100% / 0.9;
-    --shadow-glow: 0 20px 40px -10px hsl(210 85% 45% / 0.15);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Futuristic design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(220 90% 60%), hsl(160 85% 55%), hsl(280 70% 65%));
+    --cyber-gradient: linear-gradient(45deg, hsl(220 90% 60% / 0.1), hsl(160 85% 55% / 0.1));
+    --neon-glow: 0 0 20px hsl(220 90% 60% / 0.5), 0 0 40px hsl(160 85% 55% / 0.3);
+    --glass-bg: 15 25% 8% / 0.8;
+    --glass-border: 220 90% 60% / 0.2;
+    --shadow-cyber: 0 8px 32px hsl(220 90% 60% / 0.15), inset 0 1px 0 hsl(220 90% 60% / 0.1);
+    --grid-pattern: repeating-linear-gradient(90deg, transparent 0, transparent 98px, hsl(220 90% 60% / 0.03) 100px);
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -64,33 +69,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 30% 2%;
+    --foreground: 210 95% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 25% 6%;
+    --card-foreground: 210 95% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 25% 6%;
+    --popover-foreground: 210 95% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 220 95% 70%;
+    --primary-foreground: 220 30% 2%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 160 90% 60%;
+    --secondary-foreground: 220 30% 2%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 280 75% 70%;
+    --accent-foreground: 220 30% 2%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 220 20% 12%;
+    --muted-foreground: 210 50% 75%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 25% 15%;
+    --input: 220 25% 15%;
+    --ring: 220 95% 70%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -109,5 +114,53 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: var(--grid-pattern);
+    background-attachment: fixed;
+  }
+
+  /* Futuristic scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(var(--primary)), hsl(var(--secondary)));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, hsl(var(--primary-hover)), hsl(var(--secondary-hover)));
+  }
+
+  /* Cyber glow effects */
+  .cyber-card {
+    background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--card) / 0.8) 100%);
+    border: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-cyber);
+    transition: var(--transition-smooth);
+  }
+
+  .cyber-card:hover {
+    box-shadow: var(--neon-glow), var(--shadow-cyber);
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .glass-effect {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  .neon-text {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5), 0 0 20px hsl(var(--secondary) / 0.3);
+  }
+
+  .cyber-glow {
+    box-shadow: var(--neon-glow);
   }
 }

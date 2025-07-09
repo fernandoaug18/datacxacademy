@@ -60,16 +60,36 @@ const Programs = () => {
   ];
 
   return (
-    <section id="programs" className="py-20 bg-gradient-to-br from-muted/30 to-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="programs" className="py-20 bg-background relative overflow-hidden">
+      {/* Cyber background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/50 to-transparent"></div>
+        <div className="absolute inset-0 opacity-20">
+          {/* Floating particles */}
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-primary rounded-full animate-matrix-rain"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${3 + Math.random() * 2}s`
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
+        <div className="text-center mb-16 animate-slide-in-cyber">
+          <Badge variant="secondary" className="mb-4 border-secondary/30 bg-secondary/10 text-secondary">
             Nuestros Cursos
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Cursos Especializados para tu{" "}
-            <span className="bg-hero-gradient bg-clip-text text-transparent">
+            <span className="text-foreground">
               Crecimiento Profesional
             </span>
           </h2>
@@ -80,10 +100,19 @@ const Programs = () => {
 
         {/* Programs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {programs.map((program) => (
-            <Card key={program.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card border-border">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
+          {programs.map((program, index) => (
+            <Card 
+              key={program.id} 
+              className="cyber-card group animate-slide-in-cyber"
+              style={{ animationDelay: `${index * 0.3}s` }}
+            >
+              <CardHeader className="pb-4 relative">
+                {/* Program number indicator */}
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-xs font-bold text-primary-foreground">
+                  {program.id}
+                </div>
+                
+                <CardTitle className="text-xl mb-2 group-hover:neon-text transition-all duration-300">
                   {program.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground">
@@ -92,14 +121,17 @@ const Programs = () => {
               </CardHeader>
 
               <CardContent className="space-y-4">
-
                 {/* Features */}
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-sm">Lo que aprenderás:</h4>
-                  <ul className="space-y-1">
-                    {program.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <CheckCircle className="h-3 w-3 text-secondary" />
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-sm text-primary">Lo que aprenderás:</h4>
+                  <ul className="space-y-2">
+                    {program.features.map((feature, featureIndex) => (
+                      <li 
+                        key={featureIndex} 
+                        className="flex items-center gap-3 text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+                        style={{ animationDelay: `${(index * 0.3) + (featureIndex * 0.1)}s` }}
+                      >
+                        <div className="w-2 h-2 bg-gradient-to-r from-primary to-secondary rounded-full flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
@@ -108,7 +140,7 @@ const Programs = () => {
 
                 {/* CTA */}
                 <Button 
-                  className="w-full mt-6" 
+                  className="w-full mt-6 relative overflow-hidden group/btn" 
                   variant={program.id === 2 ? "secondary" : "default"}
                   onClick={() => {
                     let url = "";
@@ -131,7 +163,8 @@ const Programs = () => {
                     }
                   }}
                 >
-                  Inscribirse Ahora
+                  <span className="relative z-10">Inscribirse Ahora</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300"></div>
                 </Button>
               </CardContent>
             </Card>
