@@ -9,11 +9,6 @@ const Programs = () => {
       id: 1,
       title: "CUSTOMER EXPERIENCE EN LA INDUSTRIA 4.0",
       description: "Aprende a transformar la experiencia del cliente en la era digital con herramientas y metodologías avanzadas",
-      duration: "12 semanas",
-      students: "250+",
-      rating: "4.9",
-      price: "$399",
-      level: "Intermedio",
       features: [
         "Transformación Digital CX",
         "IoT y Customer Experience",
@@ -27,11 +22,6 @@ const Programs = () => {
       id: 2,
       title: "NPS - NET PROMOTER SCORE",
       description: "Domina la metodología NPS para medir y mejorar la lealtad de tus clientes de manera efectiva",
-      duration: "8 semanas",
-      students: "320+",
-      rating: "4.8",
-      price: "$299",
-      level: "Principiante",
       features: [
         "Fundamentos del NPS",
         "Diseño de Encuestas",
@@ -45,11 +35,6 @@ const Programs = () => {
       id: 3,
       title: "COGNOTÉCNICAS - HERRAMIENTAS PARA PENSAR MÁS Y MEJOR",
       description: "Desarrolla habilidades cognitivas avanzadas para la toma de decisiones y resolución de problemas",
-      duration: "10 semanas",
-      students: "180+",
-      rating: "4.9",
-      price: "$349",
-      level: "Intermedio",
       features: [
         "Técnicas de Pensamiento Crítico",
         "Metodologías de Resolución",
@@ -63,11 +48,6 @@ const Programs = () => {
       id: 4,
       title: "PEOPLE ANALYTICS - ESTRATEGIAS BASADAS EN DATOS PARA LA GESTIÓN DEL TALENTO",
       description: "Aplica analytics avanzado para optimizar la gestión del talento humano en tu organización",
-      duration: "14 semanas",
-      students: "150+",
-      rating: "4.9",
-      price: "$449",
-      level: "Avanzado",
       features: [
         "Métricas de RRHH",
         "Predictive Analytics",
@@ -103,12 +83,6 @@ const Programs = () => {
           {programs.map((program) => (
             <Card key={program.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card border-border">
               <CardHeader className="pb-4">
-                <div className="flex justify-start items-start mb-3">
-                  <Badge variant="outline" className="text-xs">
-                    {program.level}
-                  </Badge>
-                </div>
-                
                 <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
                   {program.title}
                 </CardTitle>
@@ -118,21 +92,6 @@ const Programs = () => {
               </CardHeader>
 
               <CardContent className="space-y-4">
-                {/* Stats */}
-                <div className="flex items-center justify-between text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    {program.duration}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="h-4 w-4" />
-                    {program.students}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                    {program.rating}
-                  </div>
-                </div>
 
                 {/* Features */}
                 <div className="space-y-2">

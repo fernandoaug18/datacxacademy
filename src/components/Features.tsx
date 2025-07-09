@@ -20,18 +20,6 @@ const Features = () => {
       color: "text-primary"
     },
     {
-      icon: Target,
-      title: "Proyectos Reales",
-      description: "Trabaja en casos de estudio reales de empresas para aplicar inmediatamente lo aprendido.",
-      color: "text-secondary"
-    },
-    {
-      icon: Users,
-      title: "Mentorías 1:1",
-      description: "Sesiones personalizadas con expertos de la industria para acelerar tu crecimiento profesional.",
-      color: "text-primary"
-    },
-    {
       icon: Zap,
       title: "Aprendizaje Acelerado",
       description: "Programas intensivos diseñados para maximizar tu tiempo y obtener resultados rápidos.",
@@ -71,7 +59,7 @@ const Features = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index} 
