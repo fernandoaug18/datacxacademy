@@ -1,16 +1,12 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-data-cx.jpg";
+// Using placeholder for hero image - will be updated with proper image
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Data and CX Academy" 
-          className="w-full h-full object-cover"
-        />
+        <div className="w-full h-full bg-gradient-to-br from-primary to-secondary"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-secondary/80"></div>
       </div>
 
