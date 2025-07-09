@@ -33,9 +33,8 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Heading */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-slide-in-cyber">
-            <span className="block mb-2">Domina el</span>
-            <span className="block text-foreground mb-2">Futuro</span>
-            <span className="block">de los Datos</span>
+            <span className="block mb-2">Domina el Futuro</span>
+            <span className="block text-foreground">de los Datos</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 text-muted-foreground leading-relaxed animate-slide-in-cyber" style={{ animationDelay: '0.3s' }}>
