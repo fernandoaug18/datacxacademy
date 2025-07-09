@@ -110,6 +110,26 @@ const Programs = () => {
                 <Button 
                   className="w-full mt-6" 
                   variant={program.id === 2 ? "secondary" : "default"}
+                  onClick={() => {
+                    let url = "";
+                    switch(program.id) {
+                      case 1:
+                        url = "https://hotmart.com/es/marketplace/productos/customer-experience-en-la-industria-4-0/W82879496W";
+                        break;
+                      case 2:
+                        url = "https://pay.hotmart.com/R40291690T?bid=1752068368220";
+                        break;
+                      case 3:
+                        url = "https://www.udemy.com/course/pensamiento-creativo-herramientas-para-pensar-mas-y-mejor/?referralCode=E597C8F566BB4E8BBDE2";
+                        break;
+                      case 4:
+                        url = "#";
+                        break;
+                    }
+                    if (url !== "#") {
+                      window.open(url, "_blank");
+                    }
+                  }}
                 >
                   Inscribirse Ahora
                 </Button>
