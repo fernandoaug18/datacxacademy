@@ -7,57 +7,75 @@ const Programs = () => {
   const programs = [
     {
       id: 1,
-      title: "Data Science Fundamentals",
-      description: "Aprende los fundamentos de ciencia de datos desde cero hasta nivel intermedio",
+      title: "CUSTOMER EXPERIENCE EN LA INDUSTRIA 4.0",
+      description: "Aprende a transformar la experiencia del cliente en la era digital con herramientas y metodologías avanzadas",
       duration: "12 semanas",
       students: "250+",
       rating: "4.9",
-      price: "$299",
-      level: "Principiante",
+      price: "$399",
+      level: "Intermedio",
       features: [
-        "Python para Data Science",
-        "Estadística y Probabilidad",
-        "Machine Learning Básico",
-        "Visualización de Datos",
-        "Proyecto Final"
+        "Transformación Digital CX",
+        "IoT y Customer Experience",
+        "Automatización de Procesos",
+        "Analytics en Tiempo Real",
+        "Casos de Industria 4.0"
       ],
       color: "bg-primary"
     },
     {
       id: 2,
-      title: "Customer Experience Analytics",
-      description: "Domina el análisis de experiencia del cliente y métricas de satisfacción",
-      duration: "10 semanas",
-      students: "180+",
+      title: "NPS - NET PROMOTER SCORE",
+      description: "Domina la metodología NPS para medir y mejorar la lealtad de tus clientes de manera efectiva",
+      duration: "8 semanas",
+      students: "320+",
       rating: "4.8",
-      price: "$349",
-      level: "Intermedio",
+      price: "$299",
+      level: "Principiante",
       features: [
-        "Customer Journey Mapping",
-        "NPS y Métricas CX",
-        "Análisis de Sentimientos",
-        "Design Thinking",
-        "Casos de Estudio Reales"
+        "Fundamentos del NPS",
+        "Diseño de Encuestas",
+        "Análisis e Interpretación",
+        "Plan de Acción",
+        "Seguimiento y Mejora"
       ],
       color: "bg-secondary"
     },
     {
       id: 3,
-      title: "Advanced Analytics & AI",
-      description: "Programa avanzado en inteligencia artificial y analytics predictivo",
-      duration: "16 semanas",
-      students: "120+",
+      title: "COGNOTÉCNICAS - HERRAMIENTAS PARA PENSAR MÁS Y MEJOR",
+      description: "Desarrolla habilidades cognitivas avanzadas para la toma de decisiones y resolución de problemas",
+      duration: "10 semanas",
+      students: "180+",
       rating: "4.9",
-      price: "$499",
-      level: "Avanzado",
+      price: "$349",
+      level: "Intermedio",
       features: [
-        "Deep Learning",
-        "NLP y Computer Vision",
-        "MLOps y Deployment",
-        "Big Data Technologies",
-        "Capstone Project"
+        "Técnicas de Pensamiento Crítico",
+        "Metodologías de Resolución",
+        "Análisis y Síntesis",
+        "Creatividad Aplicada",
+        "Casos Prácticos"
       ],
       color: "bg-gradient-to-br from-primary to-secondary"
+    },
+    {
+      id: 4,
+      title: "PEOPLE ANALYTICS - ESTRATEGIAS BASADAS EN DATOS PARA LA GESTIÓN DEL TALENTO",
+      description: "Aplica analytics avanzado para optimizar la gestión del talento humano en tu organización",
+      duration: "14 semanas",
+      students: "150+",
+      rating: "4.9",
+      price: "$449",
+      level: "Avanzado",
+      features: [
+        "Métricas de RRHH",
+        "Predictive Analytics",
+        "Retention Models",
+        "Performance Analytics",
+        "Dashboard y Reporting"
+      ],
+      color: "bg-gradient-to-br from-secondary to-primary"
     }
   ];
 
@@ -67,21 +85,21 @@ const Programs = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            Nuestros Programas
+            Nuestros Cursos
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Programas Diseñados para tu{" "}
+            Cursos Especializados para tu{" "}
             <span className="bg-hero-gradient bg-clip-text text-transparent">
-              Éxito
+              Crecimiento Profesional
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Desde principiantes hasta expertos, tenemos el programa perfecto para impulsar tu carrera en datos y experiencia del cliente.
+            Especializaciones estratégicas en Customer Experience, Analytics y desarrollo cognitivo para impulsar tu carrera profesional.
           </p>
         </div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {programs.map((program) => (
             <Card key={program.id} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card border-border">
               <CardHeader className="pb-4">

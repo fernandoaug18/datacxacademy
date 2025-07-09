@@ -6,10 +6,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Inicio", href: "#home" },
-    { name: "Programas", href: "#programs" },
-    { name: "Nosotros", href: "#about" },
-    { name: "Contacto", href: "#contact" },
+    { name: "HOME", href: "#home" },
+    { name: "CURSOS", href: "#programs" },
+    { name: "CONTACTO", href: "#contact" },
   ];
 
   return (
@@ -18,16 +17,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img 
-              src="/src/assets/logo-black.png" 
-              alt="Data y CX Academy" 
-              className="h-8 w-auto dark:hidden"
-            />
-            <img 
-              src="/src/assets/logo-white.png" 
-              alt="Data y CX Academy" 
-              className="h-8 w-auto hidden dark:block"
-            />
+            <div className="bg-hero-gradient p-2 rounded-lg">
+              <GraduationCap className="h-6 w-6 text-white" />
+            </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">Data y CX Academy</h1>
             </div>

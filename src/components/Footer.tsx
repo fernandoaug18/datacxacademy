@@ -18,12 +18,12 @@ const Footer = () => {
 
   const footerSections = [
     {
-      title: "Programas",
+      title: "Cursos",
       links: [
-        { name: "Data Science Fundamentals", href: "#" },
-        { name: "Customer Experience Analytics", href: "#" },
-        { name: "Advanced Analytics & AI", href: "#" },
-        { name: "Certificaciones", href: "#" }
+        { name: "Customer Experience Industria 4.0", href: "#" },
+        { name: "NPS - Net Promoter Score", href: "#" },
+        { name: "Cognotécnicas", href: "#" },
+        { name: "People Analytics", href: "#" }
       ]
     },
     {
