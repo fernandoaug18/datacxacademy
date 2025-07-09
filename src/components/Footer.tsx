@@ -44,9 +44,9 @@ const Footer = () => {
 
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Brand Section */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <div className="flex items-center space-x-2 mb-4">
               <img 
                 src="/lovable-uploads/47dc23a0-313b-44c7-9495-33e3338bd073.png" 

@@ -1,16 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, BarChart3, Users, TrendingUp } from "lucide-react";
 import heroImage from "@/assets/hero-data-cx.jpg";
 
 const Hero = () => {
-  const stats = [
-    { icon: BarChart3, value: "500+", label: "Estudiantes" },
-    { icon: Users, value: "98%", label: "Tasa de Satisfacción" },
-    { icon: TrendingUp, value: "85%", label: "Mejora Profesional" },
-  ];
-
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
@@ -38,26 +31,7 @@ const Hero = () => {
             <strong> Data Science</strong> y <strong>Customer Experience</strong>
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex justify-center mb-12">
-            <Button variant="glass" size="lg" className="group">
-              Ver Programas
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <stat.icon className="h-8 w-8 mx-auto mb-3 text-yellow-400 group-hover:scale-110 transition-transform" />
-                  <div className="text-3xl font-bold mb-1">{stat.value}</div>
-                  <div className="text-sm opacity-80">{stat.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
