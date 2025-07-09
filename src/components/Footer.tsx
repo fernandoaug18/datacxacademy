@@ -44,7 +44,7 @@ const Footer = () => {
 
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-7 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-4">
             <div className="flex items-center space-x-2 mb-4">
@@ -69,7 +69,7 @@ const Footer = () => {
 
           {/* Links Sections */}
           {footerSections.map((section, index) => (
-            <div key={index}>
+            <div key={index} className={index === 0 ? "lg:col-span-2" : "lg:col-span-1"}>
               <h4 className="font-semibold text-foreground mb-4">{section.title}</h4>
               <ul className="space-y-3">
                 {section.links.map((link, linkIndex) => (
