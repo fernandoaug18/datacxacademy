@@ -8,7 +8,7 @@ const Index = () => {
   console.log("Index component rendering");
   
   return (
-    <div className="min-h-screen bg-background" style={{minHeight: '100vh', backgroundColor: '#ffffff'}}>
+    <div className="min-h-screen bg-background">
       <Header />
       <Hero />
       <Programs />
